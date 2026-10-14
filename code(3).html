@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MUNDO GADGET - Descubre la tecnología que transforma tu mundo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1c1b1b",
+                        "tertiary-container": "#5663a5",
+                        "accent-gradient-start": "#6C4DDB",
+                        "surface-white": "#F8F8FA",
+                        "primary": "#5330c1",
+                        "on-secondary-fixed": "#1d0061",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#cbbeff",
+                        "error": "#ba1a1a",
+                        "glass-stroke": "rgba(255, 255, 255, 0.4)",
+                        "inverse-surface": "#313030",
+                        "on-primary-fixed": "#1d0061",
+                        "secondary-fixed": "#e7deff",
+                        "secondary-fixed-dim": "#cbbeff",
+                        "primary-fixed": "#e7deff",
+                        "on-primary-fixed-variant": "#4b24b9",
+                        "on-secondary-fixed-variant": "#4b22bc",
+                        "surface": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "background": "#fcf9f8",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-surface-variant": "#484554",
+                        "primary-fixed-dim": "#cbbeff",
+                        "on-secondary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#ebe3ff",
+                        "on-surface": "#1c1b1b",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container-high": "#eae7e7",
+                        "outline-variant": "#cac4d6",
+                        "primary-container": "#6c4ddb",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#b9c3ff",
+                        "secondary": "#603fd2",
+                        "on-primary": "#ffffff",
+                        "accent-gradient-end": "#AAB7FF",
+                        "outline": "#797585",
+                        "surface-tint": "#6343d1",
+                        "on-tertiary-fixed-variant": "#354281",
+                        "on-tertiary-fixed": "#021355",
+                        "surface-container-highest": "#e5e2e1",
+                        "tertiary-fixed": "#dee1ff",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container": "#f0edec",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary": "#3e4b8b",
+                        "surface-gray": "#ECECF1",
+                        "on-tertiary-container": "#e3e5ff",
+                        "secondary-container": "#7a5bec"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "stack-md": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-xl": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "button": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-xl-mobile": ["Sora"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #fcf9f8; overflow-x: hidden; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(83, 48, 193, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #6C4DDB 0%, #AAB7FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bg-aurora {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(108,77,219,0.15) 0%, rgba(252,249,248,0) 70%);
+            filter: blur(80px);
+            z-index: -1;
+            border-radius: 50%;
+        }
+        .floating { animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md text-on-surface antialiased relative">
+<!-- Ambient Background -->
+<div class="bg-aurora top-[-10%] left-[-10%]"></div>
+<div class="bg-aurora top-[20%] right-[-5%]" style="background: radial-gradient(circle, rgba(86,99,165,0.1) 0%, rgba(252,249,248,0) 70%);"></div>
+<!-- TopNavBar -->
+<nav class="bg-surface-white/60 dark:bg-on-background/60 backdrop-blur-xl rounded-full mt-4 mx-auto w-11/12 max-w-7xl sticky top-4 border border-glass-stroke shadow-lg shadow-primary/10 flex justify-between items-center px-8 py-3 w-full z-50">
+<div class="font-display-lg text-headline-lg tracking-tighter text-on-background dark:text-surface-bright uppercase">MUNDO GADGET</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary font-button text-button scale-95 active:scale-90 transition-transform" href="#">Inicio</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-button text-button scale-95 active:scale-90 transition-transform" href="#">Gadgets</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-button text-button scale-95 active:scale-90 transition-transform" href="#">Tecnología</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-button text-button scale-95 active:scale-90 transition-transform" href="#">Accesorios</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-button text-button scale-95 active:scale-90 transition-transform" href="#">Ofertas</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-button text-button scale-95 active:scale-90 transition-transform" href="#">Nosotros</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-2 text-on-surface-variant">
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">search</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">account_circle</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">shopping_cart</span></button>
+</div>
+<button class="hidden md:block bg-gradient-to-r from-accent-gradient-start to-accent-gradient-end text-on-primary px-6 py-2 rounded-full font-button text-button uppercase tracking-wider hover:opacity-90 transition-opacity">Ver ofertas</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[90vh] flex items-center justify-center pt-stack-lg pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center w-full relative z-10">
+<!-- Text Content -->
+<div class="lg:col-span-6 lg:col-start-1 flex flex-col items-start gap-stack-lg z-20">
+<div class="flex flex-wrap gap-3">
+<span class="glass-card px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span> +500 productos
+                    </span>
+<span class="glass-card px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span> Envíos a toda Colombia
+                    </span>
+</div>
+<h1 class="font-display-lg text-headline-xl-mobile md:text-display-lg text-on-background leading-tight">
+                    Descubre la tecnología que transforma tu 
+                    <span class="inline-block relative">
+<span class="relative z-10 text-on-primary px-4 py-1 rounded-full bg-gradient-to-r from-accent-gradient-start to-accent-gradient-end">MUNDO</span>
+</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Explora un universo de gadgets premium diseñados para elevar tu día a día. Innovación, estilo y rendimiento en tus manos.
+                </p>
+<div class="flex flex-wrap gap-4 pt-stack-sm">
+<button class="bg-gradient-to-r from-accent-gradient-start to-accent-gradient-end text-on-primary px-8 py-4 rounded-full font-button text-button uppercase tracking-wider hover:shadow-lg hover:shadow-primary/30 transition-all hover:-translate-y-1">
+                        Explorar productos
+                    </button>
+<button class="glass-card text-primary px-8 py-4 rounded-full font-button text-button uppercase tracking-wider hover:bg-white/40 transition-all">
+                        Ver novedades
+                    </button>
+</div>
+</div>
+<!-- Visual Content -->
+<div class="lg:col-span-6 relative h-[500px] lg:h-[700px] w-full flex justify-center items-center">
+<img class="absolute inset-0 w-full h-full object-contain floating scale-110 z-10" data-alt="A highly realistic 3D composition of premium tech gadgets floating in mid-air against a soft, bright minimalist studio background. The gadgets include a sleek smartwatch with a glowing screen, premium over-ear headphones, a transparent mechanical keyboard with glowing violet keys, and a modern smartphone with a fluid gradient wallpaper. The lighting is bright and ethereal, casting soft shadows, perfectly matching a high-end, light-mode glassmorphism aesthetic with subtle purple atmospheric glows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9DoUDxXic_hspj100bQWEkXNWG3mBEVS2tezx_qS8B6g97dbTNT-j9eq1d3sodXcmryTQ4hR2JL7SCTnmPGiM4akY-KBKufMENKl-7_1a9_NUcpPN3ts5vaPKznWkysQGaZYGaA_yJzxojVf0yjXcBiaHsQ6QhHDZo2uBdu5nyNTHqt_w-Gu-0ogOvhGxbNPmPgh_6RGwCCmsMq4Ovipj2zZxjVG0NkM3Lq-lgG1nrjIx7n5B9t2f"/>
+</div>
+</div>
+</header>
+<!-- Brands Strip -->
+<section class="py-stack-lg border-y border-outline-variant/20 bg-surface-white/30 backdrop-blur-sm">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500 overflow-x-auto gap-8 no-scrollbar">
+<!-- Simulated Logos -->
+<div class="font-headline-lg text-[24px] font-bold text-on-surface-variant min-w-max">Apple</div>
+<div class="font-headline-lg text-[24px] font-bold text-on-surface-variant min-w-max">SAMSUNG</div>
+<div class="font-headline-lg text-[24px] font-bold text-on-surface-variant min-w-max">SONY</div>
+<div class="font-headline-lg text-[24px] font-bold text-on-surface-variant min-w-max">JBL</div>
+<div class="font-headline-lg text-[24px] font-bold text-on-surface-variant min-w-max">Xiaomi</div>
+<div class="font-headline-lg text-[24px] font-bold text-on-surface-variant min-w-max">logitech</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-dim dark:bg-inverse-surface w-full pt-section-gap pb-stack-lg border-t border-outline-variant/30 grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto mt-section-gap">
+<div class="flex flex-col gap-4">
+<span class="font-headline-lg text-headline-lg-mobile text-on-surface dark:text-surface-white">MUNDO GADGET</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant">© 2024 MUNDO GADGET. El futuro de la tecnología en tus manos.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:underline decoration-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Privacidad</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:underline decoration-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Términos</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:underline decoration-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Soporte</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:underline decoration-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Contacto</a>
+</div>
+</footer>
+</body></html>
