@@ -1,0 +1,13 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation & Presentations
+*.pptx
+*.pdf
+
+# Compressed archives
+*.zip
+
+# Local development
+mundo-gadget-theme/
