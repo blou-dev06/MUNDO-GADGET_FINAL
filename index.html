@@ -1903,6 +1903,370 @@ html.dark .hero-pill-tag.active {
   color: white;
 }
 
+/* =========================================================
+   MOBILE-FIRST UX & UI OPTIMIZATIONS (SMARTPHONE EXPERIENCE)
+   ========================================================= */
+html, body {
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(74px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* Prevent iOS Safari auto-zoom on form inputs */
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* Compact Sticky Top Navbar on Phone */
+  nav {
+    width: 95% !important;
+    margin-top: 8px !important;
+    top: 8px !important;
+    padding: 10px 14px !important;
+    border-radius: 20px !important;
+    gap: 8px !important;
+  }
+
+  /* Hero Banners on Mobile: Compact, Clean & No Overlapping */
+  .hero-card-container {
+    min-height: 315px !important;
+    padding: 16px 14px !important;
+    border-radius: 22px !important;
+  }
+
+  .hero-arrow-btn {
+    width: 32px !important;
+    height: 32px !important;
+    top: 44% !important;
+    opacity: 0.85 !important;
+  }
+
+  #hero-badge-1,
+  #hero-badge-2 {
+    font-size: 9.5px !important;
+    padding: 4px 10px !important;
+    max-width: 68%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #hero-img-1,
+  #hero-img-2 {
+    height: 125px !important;
+  }
+
+  #hero-title-1,
+  #hero-title-2 {
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    padding: 0 6px;
+  }
+
+  #hero-sub-1,
+  #hero-sub-2 {
+    font-size: 10.5px !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Product Grid 2-Column Compact Mode on Mobile */
+  #product-grid.mobile-grid-2col {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card {
+    padding: 10px !important;
+    border-radius: 18px !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card .group\/img {
+    height: 140px !important;
+    padding: 8px !important;
+    margin-bottom: 8px !important;
+    border-radius: 14px !important;
+  }
+
+  /* Hide hover-only overlay on touch screens */
+  .product-card .group\/img > div.absolute.inset-0 {
+    display: none !important;
+  }
+
+  /* Compact badges inside 2-col mobile card */
+  #product-grid.mobile-grid-2col .product-card .group\/img > span.absolute.top-3.left-3 {
+    top: 6px !important;
+    left: 6px !important;
+    padding: 2px 6px !important;
+    font-size: 8.5px !important;
+    border-radius: 6px !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card .group\/img > span.absolute.bottom-2\.5.right-2\.5 {
+    bottom: 6px !important;
+    right: 6px !important;
+    padding: 2px 6px !important;
+    font-size: 8.5px !important;
+    border-radius: 6px !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card > div.absolute.top-4.right-4 {
+    top: 14px !important;
+    right: 14px !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card > div.absolute.top-4.right-4 button {
+    padding: 5px !important;
+  }
+
+  /* Hide secondary category pill on 2-col mobile to save space */
+  #product-grid.mobile-grid-2col .product-card .flex.gap-2.mb-2 {
+    margin-bottom: 4px !important;
+    gap: 4px !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card .flex.gap-2.mb-2 span:nth-child(2) {
+    display: none !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card .flex.gap-2.mb-2 span:first-child {
+    font-size: 8.5px !important;
+    padding: 1px 6px !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card h3 {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+    min-height: 32px;
+  }
+
+  /* Compact rating row on 2-col mobile */
+  #product-grid.mobile-grid-2col .product-card .card-rating-row {
+    padding: 3px 6px !important;
+    margin-bottom: 6px !important;
+    border-radius: 8px !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card .card-rating-row .card-star-btn {
+    font-size: 11px !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card .card-rating-row button[onclick*="openProductAndRate"]:last-child {
+    display: none !important;
+  }
+
+  /* Hide long description paragraph in 2-col mobile card to keep cards uniform and scannable */
+  #product-grid.mobile-grid-2col .product-card p.line-clamp-2 {
+    display: none !important;
+  }
+
+  /* Price + CTA stacked cleanly in 2-col mobile */
+  #product-grid.mobile-grid-2col .product-card .mt-auto.pt-2 {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
+    padding-top: 6px !important;
+  }
+
+  #product-grid.mobile-grid-2col .product-card .mt-auto.pt-2 span.text-\[21px\] {
+    font-size: 16px !important;
+    display: block;
+  }
+
+  #product-grid.mobile-grid-2col .product-card .mt-auto.pt-2 button {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 8px 10px !important;
+    font-size: 11px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Product Detail Modal -> Native Mobile Bottom Sheet */
+  .product-modal-overlay {
+    padding: 0 !important;
+    align-items: flex-end !important;
+  }
+
+  .product-modal-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 26px 26px 0 0 !important;
+    max-height: 92dvh !important;
+    overflow-y: auto !important;
+    display: block !important;
+    transform: translateY(100%);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .product-modal-overlay.active .product-modal-container {
+    transform: translateY(0) !important;
+  }
+
+  .product-modal-container > div.md\:w-1\/2 {
+    width: 100% !important;
+    overflow: visible !important;
+    padding: 16px 18px !important;
+  }
+
+  /* Sticky Close Button in Mobile Product Modal */
+  .product-modal-container > button[onclick*="closeProductModal"] {
+    position: sticky !important;
+    top: 12px !important;
+    left: calc(100% - 52px) !important;
+    margin-bottom: -40px !important;
+    z-index: 40 !important;
+    background: rgba(15, 23, 42, 0.75) !important;
+    color: #ffffff !important;
+    backdrop-filter: blur(6px);
+  }
+
+  /* Sticky Action Buttons at bottom of Product Modal on Mobile */
+  #modal-mobile-sticky-actions {
+    position: sticky;
+    bottom: 0;
+    z-index: 30;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    margin: 0 -18px -16px -18px;
+    padding: 12px 18px calc(12px + env(safe-area-inset-bottom, 0px)) 18px;
+    border-top: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 -8px 20px rgba(15, 23, 42, 0.08);
+  }
+
+  html.dark #modal-mobile-sticky-actions {
+    background: rgba(15, 23, 42, 0.96) !important;
+    border-top-color: #334155 !important;
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* Checkout Modal -> Native Mobile Bottom Sheet */
+  .checkout-overlay {
+    padding: 0 !important;
+    align-items: flex-end !important;
+  }
+
+  .checkout-modal {
+    max-width: 100% !important;
+    border-radius: 26px 26px 0 0 !important;
+    max-height: 92dvh !important;
+    padding-bottom: env(safe-area-inset-bottom, 12px);
+  }
+
+  /* Cart Drawer Full Width on Mobile */
+  .cart-drawer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+}
+
+/* Mobile Filter Drawer (< 1024px) */
+@media (max-width: 1023px) {
+  .mobile-filter-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 130;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-filter-backdrop.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  #catalog-sidebar {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 135;
+    max-height: 86dvh;
+    overflow-y: auto;
+    transform: translateY(105%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: none;
+  }
+
+  #catalog-sidebar.mobile-open {
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  #catalog-sidebar > div {
+    border-radius: 28px 28px 0 0 !important;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+    box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.25) !important;
+  }
+}
+
+/* Mobile App Bottom Bar */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px)) 8px;
+  box-shadow: 0 -4px 20px rgba(15, 23, 42, 0.08);
+}
+
+html.dark .mobile-bottom-nav {
+  background: rgba(15, 23, 42, 0.96) !important;
+  border-top-color: #1e293b !important;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.55) !important;
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 6px;
+  border-radius: 12px;
+  color: #64748b;
+  font-family: 'Sora', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  position: relative;
+  flex: 1;
+}
+
+.mobile-nav-item.active,
+.mobile-nav-item:active {
+  color: #0284c7;
+}
+
+html.dark .mobile-nav-item {
+  color: #94a3b8;
+}
+
+html.dark .mobile-nav-item.active,
+html.dark .mobile-nav-item:active {
+  color: #38bdf8;
+}
+
 </style>
   <!-- Instant Theme Initializer (Prevents FOUC) -->
   <script>
@@ -2117,6 +2481,18 @@ html.dark .hero-pill-tag.active {
       </button>
     </div>
 
+    <!-- Mobile Hero Banner Switcher Tabs (Shows 1 banner at a time on mobile to save vertical scroll) -->
+    <div class="flex lg:hidden items-center bg-slate-200/80 dark:bg-slate-800/90 p-1 rounded-2xl mb-3 border border-slate-300/60 dark:border-slate-700">
+      <button type="button" id="mobile-hero-tab-1" onclick="switchMobileHeroTab(1)"
+        class="flex-1 py-2 px-3 rounded-xl font-button text-[11px] font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 bg-white dark:bg-sky-600 text-sky-600 dark:text-white shadow-sm cursor-pointer">
+        <span>✨ Top Gadgets</span>
+      </button>
+      <button type="button" id="mobile-hero-tab-2" onclick="switchMobileHeroTab(2)"
+        class="flex-1 py-2 px-3 rounded-xl font-button text-[11px] font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 text-slate-600 dark:text-slate-300 cursor-pointer">
+        <span>🎁 Combos Ahorro</span>
+      </button>
+    </div>
+
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
       <!-- Banner 1: Carrusel de Los Mejores Productos & Novedades -->
       <div id="hero-banner-1"
@@ -2189,7 +2565,7 @@ html.dark .hero-pill-tag.active {
 
       <!-- Banner 2: Carrusel de Combos Exclusivos & Ofertas de Ahorro -->
       <div id="hero-banner-2"
-        class="hero-card-container lg:col-span-6 rounded-3xl relative overflow-hidden p-6 md:p-8 flex flex-col justify-between min-h-[390px] md:min-h-[420px] shadow-xl shadow-primary/15 border border-white/80 group"
+        class="hero-card-container hidden lg:flex lg:col-span-6 rounded-3xl relative overflow-hidden p-6 md:p-8 flex-col justify-between min-h-[390px] md:min-h-[420px] shadow-xl shadow-primary/15 border border-white/80 group"
         style="background: linear-gradient(135deg, #0f172a 0%, #0284c7 50%, #06b6d4 100%);"
         onmouseenter="pauseHeroAutoPlay(2)" onmouseleave="resumeHeroAutoPlay(2)">
         
@@ -2374,15 +2750,41 @@ html.dark .hero-pill-tag.active {
       </div>
     </div>
 
+    <!-- Mobile Quick Filter & Grid View Bar (Visible on Mobile/Tablet < 1024px) -->
+    <div class="flex lg:hidden items-center justify-between gap-2.5 mb-5">
+      <button type="button" onclick="openMobileFilterDrawer()"
+        class="flex-1 py-3 px-4 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-button text-[13px] font-bold uppercase tracking-wider shadow-md shadow-sky-600/20 flex items-center justify-center gap-2 cursor-pointer">
+        <span class="material-symbols-outlined text-[19px]">tune</span>
+        <span>Filtrar por Categoría / Precio</span>
+        <span id="mobile-active-filters-badge" class="hidden px-2 py-0.5 text-[10px] rounded-full bg-white text-sky-700 font-black">1</span>
+      </button>
+      <button type="button" id="mobile-grid-toggle-btn" onclick="toggleMobileGridView()"
+        class="py-3 px-3.5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-button text-[12px] font-bold flex items-center gap-1.5 shadow-sm cursor-pointer shrink-0"
+        title="Cambiar vista de cuadrícula (2 columnas / 1 columna)">
+        <span class="material-symbols-outlined text-[19px] text-sky-600" id="mobile-grid-toggle-icon">view_agenda</span>
+        <span id="mobile-grid-toggle-label">1 Col</span>
+      </button>
+    </div>
+
+    <!-- Mobile Filter Drawer Backdrop -->
+    <div id="mobile-filter-backdrop" class="mobile-filter-backdrop lg:hidden" onclick="closeMobileFilterDrawer()"></div>
+
     <!-- Layout: Sidebar + Grid -->
     <div class="flex flex-col lg:flex-row gap-8">
       <!-- Filter Sidebar (EXACT match to user uploaded design media_1790727738894.png) -->
       <!-- Filter Sidebar -->
       <aside class="w-full lg:w-[270px] lg:min-w-[270px] shrink-0" id="catalog-sidebar">
         <div class="bg-white dark:bg-slate-900 rounded-[28px] p-6 md:p-7 shadow-sm border border-slate-200/90 dark:border-slate-800 lg:sticky lg:top-28">
+          <!-- Mobile Drag Handle -->
+          <div class="w-12 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mb-4 lg:hidden"></div>
           <div class="flex items-center justify-between mb-6">
-            <h3 class="font-headline-lg text-[22px] font-bold text-[#0f172a] dark:text-white">Filtros</h3>
-            <span id="active-filters-count" class="hidden text-[11px] font-bold bg-sky-100 text-sky-800 dark:bg-sky-950/70 dark:text-sky-300 px-2.5 py-0.5 rounded-full border border-sky-300 dark:border-sky-700/60 shadow-sm">1 activo</span>
+            <div class="flex items-center gap-2">
+              <h3 class="font-headline-lg text-[22px] font-bold text-[#0f172a] dark:text-white">Filtros</h3>
+              <span id="active-filters-count" class="hidden text-[11px] font-bold bg-sky-100 text-sky-800 dark:bg-sky-950/70 dark:text-sky-300 px-2.5 py-0.5 rounded-full border border-sky-300 dark:border-sky-700/60 shadow-sm">1 activo</span>
+            </div>
+            <button type="button" onclick="closeMobileFilterDrawer()" class="lg:hidden w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center cursor-pointer" aria-label="Cerrar filtros">
+              <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
           </div>
 
           <!-- Categoría Filter -->
@@ -2468,18 +2870,25 @@ html.dark .hero-pill-tag.active {
             </p>
           </div>
 
-          <!-- Limpiar Filtros -->
-          <button type="button"
-            class="w-full text-center py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 font-button text-[13px] font-bold text-slate-800 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 transition-colors cursor-pointer shadow-sm"
-            onclick="clearFilters()">
-            Limpiar filtros
-          </button>
+          <!-- Limpiar Filtros + Mobile Apply Button -->
+          <div class="flex items-center gap-2.5">
+            <button type="button"
+              class="flex-1 text-center py-2.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 font-button text-[13px] font-bold text-slate-800 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 transition-colors cursor-pointer shadow-sm"
+              onclick="clearFilters()">
+              Limpiar filtros
+            </button>
+            <button type="button"
+              class="lg:hidden flex-1 text-center py-2.5 px-4 rounded-xl bg-sky-600 hover:bg-sky-700 font-button text-[13px] font-bold text-white transition-colors cursor-pointer shadow-md shadow-sky-600/20"
+              onclick="closeMobileFilterDrawer()">
+              Ver productos
+            </button>
+          </div>
         </div>
       </aside>
 
       <!-- Product Grid Container with Stable Height -->
       <div class="flex-1" id="product-grid-container">
-        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6" id="product-grid">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mobile-grid-2col" id="product-grid">
 
           <!-- prod-1. Velez Arxen Tenis Calzado -->
           <div
@@ -3772,7 +4181,7 @@ html.dark .hero-pill-tag.active {
               completo *</label>
             <input type="text" class="checkout-input" placeholder="Ej. Carlos Rodríguez" required id="checkout-name" name="name" autocomplete="name">
           </div>
-          <div class="grid grid-cols-2 gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label
                 class="font-button text-[11px] font-bold text-on-surface-variant uppercase tracking-wider mb-1 block">Email
@@ -3793,7 +4202,7 @@ html.dark .hero-pill-tag.active {
             <input type="text" class="checkout-input" placeholder="Carrera 15 #85-20, Apto 402" required
               id="checkout-address" name="address" autocomplete="street-address">
           </div>
-          <div class="grid grid-cols-2 gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label
                 class="font-button text-[11px] font-bold text-on-surface-variant uppercase tracking-wider mb-1 block">Ciudad
@@ -3873,9 +4282,17 @@ html.dark .hero-pill-tag.active {
 
       <!-- Left Column: Photo Gallery -->
       <div class="md:w-1/2 p-6 md:p-8 bg-slate-50 flex flex-col items-center justify-between border-b md:border-b-0 md:border-r border-slate-200/60">
-        <!-- Main Large Image Container -->
-        <div class="w-full h-64 md:h-80 rounded-2xl bg-white p-4 flex items-center justify-center overflow-hidden border border-slate-200/80 shadow-sm relative group">
+        <!-- Mobile Drag Indicator -->
+        <div class="w-12 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mb-3 md:hidden"></div>
+        <!-- Main Large Image Container (Supports Touch Swipe on Mobile) -->
+        <div id="modal-main-image-box" class="w-full h-60 md:h-80 rounded-2xl bg-white p-4 flex items-center justify-center overflow-hidden border border-slate-200/80 shadow-sm relative group">
           <img id="modal-main-image" src="" alt="Producto" class="max-h-full max-w-full object-contain transition-all duration-300 group-hover:scale-105">
+          <button type="button" id="modal-prev-photo-btn" onclick="stepModalPhoto(-1)" class="hidden absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/65 text-white items-center justify-center backdrop-blur-sm shadow-md cursor-pointer" aria-label="Foto anterior">
+            <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+          </button>
+          <button type="button" id="modal-next-photo-btn" onclick="stepModalPhoto(1)" class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/65 text-white items-center justify-center backdrop-blur-sm shadow-md cursor-pointer" aria-label="Foto siguiente">
+            <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+          </button>
           <span id="modal-badge-tag" class="absolute top-3 left-3 px-3 py-1 bg-sky-600 text-white rounded-lg font-button text-[11px] font-bold uppercase tracking-wider shadow-sm">
             DESTACADO
           </span>
@@ -3948,17 +4365,17 @@ html.dark .hero-pill-tag.active {
           </div>
         </div>
 
-        <!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row gap-3">
+        <!-- Action Buttons (Sticky at bottom on Mobile Bottom Sheet) -->
+        <div id="modal-mobile-sticky-actions" class="flex flex-row gap-2.5 sm:gap-3">
           <button type="button" id="modal-add-cart-btn" onclick="addModalProductToCart()"
-            class="flex-1 py-3.5 px-5 bg-sky-600 hover:bg-sky-700 text-white rounded-2xl font-button text-[13px] font-bold uppercase tracking-wider shadow-lg shadow-sky-600/25 hover:shadow-sky-600/40 hover:scale-[1.01] transition-all flex items-center justify-center gap-2 cursor-pointer">
-            <span class="material-symbols-outlined text-[19px]">add_shopping_cart</span>
-            Añadir al Carrito
+            class="flex-1 py-3.5 px-3 sm:px-5 bg-sky-600 hover:bg-sky-700 text-white rounded-2xl font-button text-[12px] sm:text-[13px] font-bold uppercase tracking-wider shadow-lg shadow-sky-600/25 hover:shadow-sky-600/40 hover:scale-[1.01] transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+            <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+            <span>Añadir</span>
           </button>
           <button type="button" onclick="buyModalProductNow()"
-            class="py-3.5 px-5 bg-slate-900 hover:bg-slate-800 text-white rounded-2xl font-button text-[13px] font-bold uppercase tracking-wider shadow-md hover:scale-[1.01] transition-all flex items-center justify-center gap-2 cursor-pointer">
-            <span class="material-symbols-outlined text-[19px]">bolt</span>
-            Comprar Ahora
+            class="flex-1 sm:flex-initial py-3.5 px-3 sm:px-5 bg-slate-900 hover:bg-slate-800 text-white rounded-2xl font-button text-[12px] sm:text-[13px] font-bold uppercase tracking-wider shadow-md hover:scale-[1.01] transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+            <span class="material-symbols-outlined text-[18px]">bolt</span>
+            <span>Comprar Ahora</span>
           </button>
         </div>
 
@@ -4047,19 +4464,19 @@ html.dark .hero-pill-tag.active {
 
   <!-- Floating Feedback Toast -->
   <div
-    class="fixed bottom-24 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none glass-card bg-white px-5 py-3 rounded-2xl shadow-xl border border-primary/30 flex items-center gap-3"
+    class="fixed bottom-24 right-4 md:right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none glass-card bg-white px-5 py-3 rounded-2xl shadow-xl border border-primary/30 flex items-center gap-3 max-w-[90vw]"
     id="toast-message">
-    <span class="w-7 h-7 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+    <span class="w-7 h-7 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
       <span class="material-symbols-outlined text-[17px]">check_circle</span>
     </span>
-    <span class="font-button text-[13px] text-on-surface" id="toast-text">Producto añadido</span>
+    <span class="font-button text-[13px] text-on-surface truncate" id="toast-text">Producto añadido</span>
   </div>
 
-  <!-- Floating WhatsApp Action Button (Icon Only) -->
+  <!-- Floating WhatsApp Action Button (Icon Only - Positioned above Mobile Bottom Nav) -->
   <a href="https://wa.me/573052940728?text=Hola%20Mundo%20Gadget%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos"
      target="_blank"
      rel="noopener noreferrer"
-     class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-[#25D366]/50 transition-all duration-300 hover:scale-110 cursor-pointer ring-3 ring-white/90"
+     class="fixed bottom-20 right-3.5 md:bottom-6 md:right-6 z-40 w-12 h-12 md:w-14 md:h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-[#25D366]/50 transition-all duration-300 hover:scale-110 cursor-pointer ring-3 ring-white/90"
      aria-label="Chatear por WhatsApp con Mundo Gadget"
      title="Chatea con nosotros por WhatsApp (+57 305 294 0728)">
     <!-- Pulsing online notification dot -->
@@ -4068,10 +4485,37 @@ html.dark .hero-pill-tag.active {
       <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-400 border-2 border-white"></span>
     </span>
     <!-- WhatsApp SVG Icon -->
-    <svg class="w-7 h-7 fill-current drop-shadow-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg class="w-6 h-6 md:w-7 md:h-7 fill-current drop-shadow-sm" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
+
+  <!-- ========== APP-LIKE MOBILE BOTTOM NAVIGATION BAR ========== -->
+  <div id="mobile-bottom-nav" class="mobile-bottom-nav md:hidden flex items-center justify-around">
+    <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="mobile-nav-item active" id="mnav-home">
+      <span class="material-symbols-outlined text-[21px]">home</span>
+      <span>Inicio</span>
+    </button>
+    <button type="button" onclick="openMobileSearchFromBottomNav()" class="mobile-nav-item" id="mnav-search">
+      <span class="material-symbols-outlined text-[21px]">search</span>
+      <span>Buscar</span>
+    </button>
+    <button type="button" onclick="openMobileFilterDrawer()" class="mobile-nav-item" id="mnav-filters">
+      <span class="material-symbols-outlined text-[21px]">tune</span>
+      <span>Filtros</span>
+      <span id="mnav-filters-badge" class="hidden absolute top-0.5 right-3 bg-sky-600 text-white text-[9px] font-black rounded-full w-4 h-4 items-center justify-center">1</span>
+    </button>
+    <button type="button" onclick="toggleFavoritesFromBottomNav()" class="mobile-nav-item" id="mnav-favs">
+      <span class="material-symbols-outlined text-[21px]" id="mnav-favs-icon">favorite</span>
+      <span>Favoritos</span>
+      <span id="mnav-favs-badge" class="hidden absolute top-0.5 right-3 bg-rose-500 text-white text-[9px] font-black rounded-full w-4 h-4 items-center justify-center">0</span>
+    </button>
+    <button type="button" onclick="openCart()" class="mobile-nav-item" id="mnav-cart">
+      <span class="material-symbols-outlined text-[21px]">shopping_bag</span>
+      <span>Carrito</span>
+      <span id="mnav-cart-badge" class="hidden absolute top-0.5 right-3 bg-sky-600 text-white text-[9px] font-black rounded-full w-4 h-4 items-center justify-center">0</span>
+    </button>
+  </div>
 
   <script>
 /**
@@ -4739,20 +5183,40 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    // Update active filter badge counter in sidebar
+    // Update active filter badge counter in sidebar & mobile buttons
     const activeFiltersBadge = document.getElementById('active-filters-count');
-    if (activeFiltersBadge) {
-      let filterCount = 0;
-      if (selectedCat) filterCount++;
-      if (maxPrice < 650000) filterCount++;
-      if (checkedBrands.length > 0) filterCount += checkedBrands.length;
-      if (onlyFavoritesFilter) filterCount++;
+    const mobileActiveFiltersBadge = document.getElementById('mobile-active-filters-badge');
+    const mnavFiltersBadge = document.getElementById('mnav-filters-badge');
+    let filterCount = 0;
+    if (selectedCat) filterCount++;
+    if (maxPrice < 650000) filterCount++;
+    if (checkedBrands.length > 0) filterCount += checkedBrands.length;
+    if (onlyFavoritesFilter) filterCount++;
 
+    if (activeFiltersBadge) {
       if (filterCount > 0) {
         activeFiltersBadge.textContent = `${filterCount} activo${filterCount > 1 ? 's' : ''}`;
         activeFiltersBadge.classList.remove('hidden');
       } else {
         activeFiltersBadge.classList.add('hidden');
+      }
+    }
+    if (mobileActiveFiltersBadge) {
+      if (filterCount > 0) {
+        mobileActiveFiltersBadge.textContent = filterCount;
+        mobileActiveFiltersBadge.classList.remove('hidden');
+      } else {
+        mobileActiveFiltersBadge.classList.add('hidden');
+      }
+    }
+    if (mnavFiltersBadge) {
+      if (filterCount > 0) {
+        mnavFiltersBadge.textContent = filterCount;
+        mnavFiltersBadge.classList.remove('hidden');
+        mnavFiltersBadge.classList.add('flex');
+      } else {
+        mnavFiltersBadge.classList.add('hidden');
+        mnavFiltersBadge.classList.remove('flex');
       }
     }
 
@@ -5000,8 +5464,32 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateFavoritesFilterButtonUI() {
     const badge = document.getElementById('favorites-count-badge');
     const filterBtn = document.getElementById('favorites-filter-btn');
+    const mnavFavsBadge = document.getElementById('mnav-favs-badge');
+    const mnavFavsBtn = document.getElementById('mnav-favs');
+    const mnavFavsIcon = document.getElementById('mnav-favs-icon');
     if (badge) {
       badge.textContent = favoritesSet.size;
+    }
+    if (mnavFavsBadge) {
+      mnavFavsBadge.textContent = favoritesSet.size;
+      if (favoritesSet.size > 0) {
+        mnavFavsBadge.classList.remove('hidden');
+        mnavFavsBadge.classList.add('flex');
+      } else {
+        mnavFavsBadge.classList.add('hidden');
+        mnavFavsBadge.classList.remove('flex');
+      }
+    }
+    if (mnavFavsBtn && mnavFavsIcon) {
+      if (onlyFavoritesFilter) {
+        mnavFavsBtn.classList.add('active');
+        mnavFavsIcon.style.fontVariationSettings = "'FILL' 1";
+        mnavFavsIcon.classList.add('text-rose-500');
+      } else {
+        mnavFavsBtn.classList.remove('active');
+        mnavFavsIcon.style.fontVariationSettings = favoritesSet.size > 0 ? "'FILL' 1" : "'FILL' 0";
+        mnavFavsIcon.classList.toggle('text-rose-500', favoritesSet.size > 0);
+      }
     }
     if (filterBtn) {
       if (onlyFavoritesFilter) {
@@ -5117,8 +5605,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update badge counters
     const counterBadge = document.getElementById('cart-counter');
     const drawerBadge = document.getElementById('cart-drawer-count');
+    const mnavCartBadge = document.getElementById('mnav-cart-badge');
     if (counterBadge) counterBadge.textContent = count;
     if (drawerBadge) drawerBadge.textContent = count;
+    if (mnavCartBadge) {
+      mnavCartBadge.textContent = count;
+      if (count > 0) {
+        mnavCartBadge.classList.remove('hidden');
+        mnavCartBadge.classList.add('flex');
+      } else {
+        mnavCartBadge.classList.add('hidden');
+        mnavCartBadge.classList.remove('flex');
+      }
+    }
 
     // Pulse badge
     if (counterBadge) {
@@ -5553,12 +6052,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const catEl = document.getElementById('modal-category');
     const qtyInput = document.getElementById('modal-qty-input');
     const counterEl = document.getElementById('modal-photo-counter');
+    const prevPhotoBtn = document.getElementById('modal-prev-photo-btn');
+    const nextPhotoBtn = document.getElementById('modal-next-photo-btn');
 
     if (titleEl) titleEl.textContent = name;
     if (priceEl) priceEl.textContent = formatUSD(unitPrice);
     if (descEl) descEl.textContent = currentModalProduct.description;
     if (catEl) catEl.textContent = currentModalProduct.category;
     if (qtyInput) qtyInput.value = 1;
+
+    currentModalProduct.currentImgIndex = 0;
 
     const mainImg = document.getElementById('modal-main-image');
     if (mainImg) {
@@ -5572,6 +6075,20 @@ document.addEventListener('DOMContentLoaded', function () {
         counterEl.textContent = `Foto 1 de ${imageList.length}`;
       } else {
         counterEl.style.display = 'none';
+      }
+    }
+
+    if (prevPhotoBtn && nextPhotoBtn) {
+      if (imageList.length > 1) {
+        prevPhotoBtn.classList.remove('hidden');
+        prevPhotoBtn.classList.add('flex');
+        nextPhotoBtn.classList.remove('hidden');
+        nextPhotoBtn.classList.add('flex');
+      } else {
+        prevPhotoBtn.classList.add('hidden');
+        prevPhotoBtn.classList.remove('flex');
+        nextPhotoBtn.classList.add('hidden');
+        nextPhotoBtn.classList.remove('flex');
       }
     }
 
@@ -5882,12 +6399,47 @@ document.addEventListener('DOMContentLoaded', function () {
       btnElem.classList.add('active');
       const idx = btnElem.getAttribute('data-index');
       const total = btnElem.getAttribute('data-total');
+      if (currentModalProduct && idx) {
+        currentModalProduct.currentImgIndex = parseInt(idx, 10) - 1;
+      }
       const counterEl = document.getElementById('modal-photo-counter');
       if (counterEl && idx && total) {
         counterEl.textContent = `Foto ${idx} de ${total}`;
       }
     }
   };
+
+  window.stepModalPhoto = function (delta) {
+    if (!currentModalProduct || !Array.isArray(currentModalProduct.images) || currentModalProduct.images.length <= 1) return;
+    const total = currentModalProduct.images.length;
+    const cur = currentModalProduct.currentImgIndex || 0;
+    const nextIdx = ((cur + delta) % total + total) % total;
+    currentModalProduct.currentImgIndex = nextIdx;
+    const thumbs = document.querySelectorAll('.modal-thumb');
+    const targetThumb = thumbs[nextIdx] || null;
+    window.selectModalThumbnail(currentModalProduct.images[nextIdx], targetThumb);
+    if (targetThumb && targetThumb.scrollIntoView) {
+      targetThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+  };
+
+  // Touch swipe on Product Modal Main Photo
+  const modalImgBox = document.getElementById('modal-main-image-box');
+  if (modalImgBox) {
+    let modalTouchStartX = 0;
+    modalImgBox.addEventListener('touchstart', function (e) {
+      if (e.changedTouches && e.changedTouches[0]) {
+        modalTouchStartX = e.changedTouches[0].screenX;
+      }
+    }, { passive: true });
+    modalImgBox.addEventListener('touchend', function (e) {
+      if (e.changedTouches && e.changedTouches[0]) {
+        const diff = e.changedTouches[0].screenX - modalTouchStartX;
+        if (diff > 40) window.stepModalPhoto(-1);
+        else if (diff < -40) window.stepModalPhoto(1);
+      }
+    }, { passive: true });
+  }
 
   window.changeModalQty = function (delta) {
     const input = document.getElementById('modal-qty-input');
@@ -6197,11 +6749,101 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   window.jumpHeroToSlide = function (carouselNum, targetIdx) {
+    if (window.innerWidth < 1024 && window.switchMobileHeroTab) {
+      window.switchMobileHeroTab(carouselNum);
+    }
     window.goToHeroSlide(carouselNum, targetIdx);
     const banner = document.getElementById(`hero-banner-${carouselNum}`);
     if (banner) {
       banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
+  };
+
+  // ===== MOBILE HERO TAB SWITCHER, FILTER DRAWER & BOTTOM NAV =====
+  window.switchMobileHeroTab = function (tabNum) {
+    const b1 = document.getElementById('hero-banner-1');
+    const b2 = document.getElementById('hero-banner-2');
+    const t1 = document.getElementById('mobile-hero-tab-1');
+    const t2 = document.getElementById('mobile-hero-tab-2');
+    if (!b1 || !b2) return;
+
+    const activeClasses = ['bg-white', 'dark:bg-sky-600', 'text-sky-600', 'dark:text-white', 'shadow-sm'];
+    const inactiveClasses = ['text-slate-600', 'dark:text-slate-300'];
+
+    if (tabNum === 2) {
+      b1.classList.add('hidden', 'lg:flex');
+      b1.classList.remove('flex');
+      b2.classList.remove('hidden');
+      b2.classList.add('flex');
+      if (t2 && t1) {
+        t2.classList.add(...activeClasses);
+        t2.classList.remove(...inactiveClasses);
+        t1.classList.remove(...activeClasses);
+        t1.classList.add(...inactiveClasses);
+      }
+    } else {
+      b2.classList.add('hidden', 'lg:flex');
+      b2.classList.remove('flex');
+      b1.classList.remove('hidden');
+      b1.classList.add('flex');
+      if (t1 && t2) {
+        t1.classList.add(...activeClasses);
+        t1.classList.remove(...inactiveClasses);
+        t2.classList.remove(...activeClasses);
+        t2.classList.add(...inactiveClasses);
+      }
+    }
+  };
+
+  window.openMobileFilterDrawer = function () {
+    const sidebar = document.getElementById('catalog-sidebar');
+    const backdrop = document.getElementById('mobile-filter-backdrop');
+    if (sidebar && backdrop) {
+      sidebar.classList.add('mobile-open');
+      backdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeMobileFilterDrawer = function () {
+    const sidebar = document.getElementById('catalog-sidebar');
+    const backdrop = document.getElementById('mobile-filter-backdrop');
+    if (sidebar && backdrop) {
+      sidebar.classList.remove('mobile-open');
+      backdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+
+  window.toggleMobileGridView = function () {
+    const grid = document.getElementById('product-grid');
+    const icon = document.getElementById('mobile-grid-toggle-icon');
+    const label = document.getElementById('mobile-grid-toggle-label');
+    if (!grid) return;
+
+    const isTwoCol = grid.classList.toggle('mobile-grid-2col');
+    if (icon) icon.textContent = isTwoCol ? 'view_agenda' : 'grid_view';
+    if (label) label.textContent = isTwoCol ? '1 Col' : '2 Col';
+    window.showToast(isTwoCol ? 'Vista compacta: 2 columnas' : 'Vista detallada: 1 columna');
+  };
+
+  window.openMobileSearchFromBottomNav = function () {
+    const catalogSearch = document.getElementById('catalog-search-wrapper');
+    const catalogInput = document.getElementById('catalog-search-input');
+    if (catalogSearch) {
+      catalogSearch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (catalogInput) {
+        setTimeout(() => catalogInput.focus(), 300);
+      }
+    } else {
+      window.toggleSearchLupa();
+    }
+  };
+
+  window.toggleFavoritesFromBottomNav = function () {
+    window.toggleFavoritesFilter();
+    const catalogEl = document.getElementById('catalogo');
+    if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
   };
 
   window.openHeroProduct = function (carouselNum) {
