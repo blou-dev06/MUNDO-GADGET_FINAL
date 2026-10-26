@@ -1,0 +1,7 @@
+# robots.txt for Mundo Gadget Colombia
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+Sitemap: https://mundogadget.com/sitemap.xml
