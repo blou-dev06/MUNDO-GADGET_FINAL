@@ -4,4 +4,4 @@ Allow: /
 Disallow: /private/
 Disallow: /admin/
 
-Sitemap: https://mundogadget.com/sitemap.xml
+Sitemap: https://blou-dev06.github.io/MUNDO-GADGET_FINAL/sitemap.xml
